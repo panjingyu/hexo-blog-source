@@ -1,3 +1,4 @@
 [submodule "themes/next"]
 	path = themes/next
-	url = https://github.com/pjy-archive/hexo-theme-next
+	url = ssh://git@github.com/pjy-archive/hexo-theme-next
+	branch = deploy
