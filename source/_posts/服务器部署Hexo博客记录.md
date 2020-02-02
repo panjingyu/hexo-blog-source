@@ -1,7 +1,11 @@
 ---
 title: 服务器部署Hexo博客记录
-tags: 'Hexo, Git'
 date: 2020-02-02 21:17:57
+categories:
+- 博客
+tags:
+- 'Hexo'
+- 'Git'
 ---
 
 
