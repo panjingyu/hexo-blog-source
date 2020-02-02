@@ -191,7 +191,6 @@ echo "Welcome to test page!" > /var/www/example.com/html/index.html
 
 #### 为Nginx添加server block的配置文件
 
-In order for Nginx to serve this content, it’s necessary to create a server block with the correct directives. Instead of modifying the default configuration file directly, let’s make a new one at /etc/nginx/sites-available/example.com:
 无需改动`Nginx`的默认配置文件，可添加对应于网站域名的新配置文件：
 ```bash
 sudo nano /etc/nginx/sites-available/example.com
