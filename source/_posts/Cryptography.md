@@ -113,7 +113,7 @@ Stream ciphers cannot have perfect secrecy! Therefore,
 > \forall i: \text{no "efficient" adversary can predict bit } i+1 \text{ for "non-negligible" } \epsilon
 > $$
 
-Suppose PRG is predictable, $ \exists i: \boldsymbol{G}(k) |_{1, ..., i} \overset{alg.}{\longrightarrow} \boldsymbol{G} |_{i+1, ..., n}$, the stream cipher would not be secure.
+Suppose PRG is predictable, $\exists i: \boldsymbol{G}(k) |_{1, ..., i} \overset{alg.}{\longrightarrow} \boldsymbol{G} |_{i+1, ..., n}$, the stream cipher would not be secure.
 
 If an attacker acutally intercepts a particular ciphertext $c$, and by some prior knowledge, the attacker actually knows the value of initial part of the message, then it could xor the ciphertext with the known prefix of the message gives a prefix of the pseudorandom sequence, with which the attacker can predict the remainder of the pseudorandom sequence and thus the remainder of the message.
 
