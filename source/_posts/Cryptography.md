@@ -1,13 +1,17 @@
 ---
 title: Cryptography
-categories:
-- Cryptography
 tags:
-- Cryptography
-- Lecture Notes
+  - Cryptography
+  - Lecture Notes
+categories:
+  - Cryptography
 description: Notes taken from Dan Boneh's Cryptography course on coursera. (Updating...)
 mathjax: true
+date: 2020-02-04 17:38:06
 ---
+
+
+[TOC]
 
 # Mathematical Background
 
