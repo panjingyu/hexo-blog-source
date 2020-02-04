@@ -10,9 +10,6 @@ mathjax: true
 date: 2020-02-04 17:38:06
 ---
 
-
-[TOC]
-
 # Mathematical Background
 
 ## Discrete Probability
