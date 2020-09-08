@@ -99,4 +99,4 @@ theme: next
 deploy:
   type: git
   repo: ssh://git@pan.codes:10086/home/git/blog-hexo.git
-  branch: public
+  branch: master
