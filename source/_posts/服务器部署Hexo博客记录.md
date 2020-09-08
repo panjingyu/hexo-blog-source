@@ -40,8 +40,10 @@ hexo server # 本地渲染网页，应当会提示可通过localhost:4000浏览�
 `Hexo`通过命令`hexo deploy`，利用配置文件指定的`deployer`进行远程部署。
 
 服务器上的架构由以下两部分组成：
+
 - `Git`服务器
 - `Nginx`网页服务器
+
 其中，`Git`服务器创建网站数据的`repository`（就像在`Github Pages`上看到的那样），并且配置`post-receive`的`Git hook`以在每次接收完毕从本地发送的`push`时自动更新网站数据。
 
 这里以`Ubuntu 18.04LTS`为例。
@@ -64,8 +66,6 @@ touch .ssh/authorized_keys && chmod 600 .ssh/authorized_keys
 然后，需要在`.ssh/authorized_keys`中添加本地的`SSH`公钥（即`~/.ssh/id_rsa.pub`文件的内容），每行一个公钥对应一个用户。我们需要手动将本地的`id_rsa.pub`的内容复制到服务器中的`authorized_keys`中；如果服务器上有已经上传的公钥，可按以下方式添加：
 ```bash
 cat /tmp/id_rsa.john.pub >> ~/.ssh/authorized_keys
-cat /tmp/id_rsa.josie.pub >> ~/.ssh/authorized_keys
-cat /tmp/id_rsa.jessica.pub >> ~/.ssh/authorized_keys
 ```
 这样一来，已添加的用户就能通过`SSH`协议以`git`用户身份登录服务器。但也正因此，该`git`用户存在安全问题，可通过限制其使用`git-shell`来解决；`git-shell`仅能用于进行和`Git`相关的活动。
 ```bash
@@ -126,9 +126,11 @@ Available applications:
   OpenSSH
 ```
 可见，有3种和`Nginx`相关的选项：
+
 - `Nginx Full`：80端口和433端口
 - `Nginx HTTP`: 仅80端口
 - `Nginx HTTPS`: 仅433端口
+
 可先对`Nginx Full`添加允许规则，命令如下：
 ```bash
 sudo ufw allow 'Nginx Full'
@@ -151,6 +153,7 @@ sudo ufw enable # 打开防火墙
 sudo systemctl <command> nginx
 ```
 来控制`Nginx`服务的运行。其中，`<command>`可替换为
+
 - `stop`：停止服务；
 - `start`：启动服务；
 - `restart`：重启服务；
@@ -161,6 +164,7 @@ sudo systemctl <command> nginx
 可使用`sudo nginx -t`来测试配置文件是否合法，通常用于重载配置之前。
 
 常用文件如下：
+
 - `/etc/nginx`：`Nginx`的配置目录；
 - `/etc/nginx/nginx.conf`：`Nginx`的主配置文件，用于修改全局配置；
 - `/etc/nginx/sites-available`：放置不同网站的`server blocks`的目录，其中的配置文件仅在被链接至`/etc/nginx/sites-enabled/`目录中时才生效；
@@ -168,6 +172,7 @@ sudo systemctl <command> nginx
 - `/etc/nginx/snippets`：放置一些配置片段，可被`Nginx`配置中的别处引用。
 
 日志文件如下：
+
 - `/var/log/nginx/access.log`：所有对服务器的请求都被记录于此，除非配置了其他指定文件；
 - `/var/log/nginx/error.log`： `Nginx`的错误日志。
 
