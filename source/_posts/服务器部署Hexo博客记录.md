@@ -1,6 +1,7 @@
 ---
 title: 服务器部署Hexo博客记录
 date: 2020-02-02 21:17:57
+updated: 2020-09-08 23:58:24
 categories:
 - 博客
 tags:
